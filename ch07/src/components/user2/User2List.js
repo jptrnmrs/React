@@ -44,7 +44,6 @@ export default function User2List(){
         deleteMutation.mutate(user);
     }
 
-
     return(
         <div className="User2List">
         <span>User2 목록</span>
@@ -61,7 +60,7 @@ export default function User2List(){
                 </tr>
             </thead>
             <tbody>
-            {users.map((user) => (
+            {users?.map((user) => (
                 <tr className="user" key={user.uid}>
                     <td>{user.uid}</td>
                     <td>{user.name}</td>
